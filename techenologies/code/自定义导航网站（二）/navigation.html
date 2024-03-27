@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Navigation</title>
+</head>
+
+<body>
+    <h1>Web Navigation</h1>
+    <form id="addPageForm">
+        <label for="pageName">Page Name:</label>
+        <input type="text" id="pageName" name="pageName" required>
+        <label for="pageLink">Page Link:</label>
+        <input type="url" id="pageLink" name="pageLink" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Saved Pages</h2>
+    <ul id="linksList">
+        <!-- Links will be dynamically added here -->
+    </ul>
+    <button onclick="clearAll()">Clear All</button>
+    <button onclick="exportAll()">Export All</button><br><br>
+    <input type="file" id="fileInput">
+    <button onclick="importFile()">Import</button>
+
+    <hr>
+
+    <h2>Add Custom Link</h2>
+    <form id="addCustomPageForm">
+        <label for="customPageName">Page Name:</label>
+        <input type="text" id="customPageName" name="customPageName" required>
+        <label for="pagePrefix">Page Prefix:</label>
+        <input type="text" id="pagePrefix" name="pagePrefix" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Saved Pages</h2>
+    <ul id="customLinksList">
+        <!-- Links will be dynamically added here -->
+    </ul>
+    <button onclick="clearAllCustomPages()">Clear All</button>
+    <button onclick="exportAllCustomPages()">Export All</button><br><br>
+    <input type="file" id="customFileInput">
+    <button onclick="importCustomPagesFile()">Import</button>
+
+    <script src="pages.js"></script>
+    <script src="custom_links.js"></script>
+
+
+</body>
